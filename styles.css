@@ -30,33 +30,31 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	background-color:burlywood;
-	text-align: center;
+	text-align:center;
+	
 
 }
-p {
+nav {
+	margin:32px;
+	display:block;
 	color:white;
 	font-size:20px;
-	text-align:center;
+	text-align:left
 }
 h1 {
 	text-align:center;
 	color:white;
 	font-size:40px;
+	background-color: cornflowerblue;
+
 
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+	
+h2 {
+	color:white;
+	font-size:40px;
+	background-color: cornflowerblue;
+	
 }
 

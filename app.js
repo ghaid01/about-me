@@ -1,88 +1,177 @@
 'use stripct'
+var gameScore;
+gameScore = 0;
 var name = prompt('What is your name ?');
 alert('Welcome ' + name + ' to my guessing game!!');
-var age = prompt('Do you think I\'m 18?');
+var questions = [
+    ['Do you think I\'m 18?',
+        'Yes!! you are right!!',
+        'oops you were wrong'
+
+    ],
+    [
+        'Do you think I study software engineering?',
+        'Yupp that is rightt!!',
+        'nope not true'
+
+
+
+
+
+    ],
+    ['Do I like singing?',
+        'Yes!! you are right!!',
+        'oops you were wrong'
+
+    ],
+    ['Do I like puppies?',
+        'Yupp that is rightt!!',
+        'nope not true'
+
+    ],
+    ['Is my favorite color blue?',
+        'Yes!! you are right!!',
+        'oops you were wrong'
+
+    ],
+
+]
+var currentquestion = questions[0];
+
+
+var age = prompt(currentquestion[0]);
 age = age.toLocaleLowerCase();
-if(age =='yes'){
-alert('Yes!! you are right!!');
-} else if(age =='y') {
+if (age == 'yes') {
     alert('Yes!! you are right!!');
-}else if(age =='no'){
+    gameScore++
+} else if (age == 'y') {
+    alert('Yes!! you are right!!');
+    gameScore++
+} else if (age == 'no') {
     alert('oops you were wrong');
 
-    
-} else if(age =='n'){
+
+} else if (age == 'n') {
     alert('oops you were wrong');
 }
-else{
+else {
     alert('guess again!');
 }
+var currentquestion = questions[1];
 
 
-var major = prompt('Do you think I study software engineering?');
+var major = prompt(currentquestion[0]);
 major = major.toLocaleLowerCase();
-console.log('major',major)
-if(major =='yes'){
+console.log('major', major)
+if (major == 'yes') {
     alert('Yupp that is rightt!!');
+    gameScore++
 
 }
-else if(major == 'y'){
+else if (major == 'y') {
     alert('Yupp that is rightt!!');
+    gameScore++
 }
-else if(major == 'no'){
+else if (major == 'no') {
     alert('nope not true');
 }
-else if(major == 'n'){
+else if (major == 'n') {
     alert('nope not true');
 } else {
     alert('guess again!');
 }
-var hobbies = prompt('Do I like singing?');
+var currentquestion = questions[2];
+
+var hobbies = prompt(currentquestion[0]);
 hobbies = hobbies.toLocaleLowerCase();
-if(hobbies=='yes'){
+if (hobbies == 'yes') {
     alert('Yes!! you are right!!');
-    } else if(hobbies =='y') {
-        alert('Yes!! you are right!!');
-    }else if(hobbies =='no'){
-        alert('oops you were wrong');
-    
-        
-    } else if(hobbies =='n'){
-        alert('oops you were wrong');
-    }
-    else{
-        alert('guess again!');
-    }
-var puppies = prompt('Do I like puppies?');
+    gameScore++
+} else if (hobbies == 'y') {
+    gameScore++
+    alert('Yes!! you are right!!');
+} else if (hobbies == 'no') {
+    alert('oops you were wrong');
+
+
+} else if (hobbies == 'n') {
+    alert('oops you were wrong');
+}
+else {
+    alert('guess again!');
+}
+var currentquestion = questions[3];
+
+
+var puppies = prompt(currentquestion[0]);
 puppies = puppies.toLocaleLowerCase();
-if(puppies=='yes'){
+if (puppies == 'yes') {
     alert('Yupp that is rightt!!');
+    gameScore++
 
 }
-else if(puppies =='y'){
+else if (puppies == 'y') {
+    
     alert('Yupp that is rightt!!');
+    gameScore++
 }
-else if(puppies =='no'){
+else if (puppies == 'no') {
     alert('nope not true');
 }
-else if(puppies =='n'){
+else if (puppies == 'n') {
     alert('nope not true');
 } else {
     alert('guess again!');
 }
-var color = prompt('Is my favorite color blue?');
+var currentquestion = questions[4];
+
+var color = prompt(currentquestion[0]);
 color = color.toLocaleLowerCase();
-if(color =='yes'){
-alert('Yes!! you are right!!');
-} else if(color =='y') {
+if (color == 'yes') {
     alert('Yes!! you are right!!');
-}else if(color =='no'){
+    gameScore++
+} else if (color == 'y') {
+    alert('Yes!! you are right!!');
+    gameScore++
+} else if (color == 'no') {
     alert('oops you were wrong');
 
-    
-} else if(color =='n'){
+
+} else if (color == 'n') {
     alert('oops you were wrong');
 }
-else{
+else {
     alert('guess again!');
 }
+var hours = prompt('How many hours do i spend in college?');
+var i;
+for (i = 0; i < 3; i++) {
+    if (hours < 9) {
+        alert('too short');
+    } else if (hours > 9) {
+        alert('too long');
+    } else {
+        alert('That is right!!');
+        gameScore++
+        break;
+    }
+    hours=prompt('How many hours do i spend in college?');
+}
+
+var songs =prompt('What are my favorite songs');
+var i;
+for (i = 0; i < 5; i++) {
+if (songs == 'all of me' || songs == 'falling' || songs == 'sweater weather'){
+    alert('yup!! good guess');
+    gameScore++
+    break;
+} else {
+    alert('that is wrong');
+    
+
+}
+songs=prompt('What are my favorite songs?');
+}
+ 
+alert('GameScore= ' + gameScore);
+
