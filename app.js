@@ -1,6 +1,6 @@
 // 'use stripct'
-// var gameScore;
-// gameScore = 0;
+var gameScore;
+gameScore = 0;
 // var name = prompt('What is your name ?');
 // alert('Welcome ' + name + ' to my guessing game!!');
 // var questions = [
@@ -164,41 +164,44 @@ for (i = 0; i < 3; i++) {
         alert('too short');
     } else if (hours > 9) {
         alert('too long');
-        
-    } else if (hours == 9) {
+
+    } else if (hours === 9) {
         alert('That is right!!');
-        break;
+        gameScore++
+       break;
+
+    }
+    else {
+        alert('please enter a number');
+       
         
     }
 
-    //     gameScore++
-    //     break;
-    //         else {
-    //         alert('please enter a number');
-    //     }
-
-
-
 }
-// hours = prompt('How many hours do i spend in college?');
 
 
-// var songs =prompt('What are my favorite songs');
-// var i;
-// for (i = 0; i < 5; i++) {
-// if (songs == 'all of me' || songs == 'falling' || songs == 'sweater weather'){
-//     alert('yup!! good guess');
-//     gameScore++
-//     break;
-// } else {
-//     alert('that is wrong');
+function getSong(question) {
+
+    var songs = prompt(question);
+    var i;
+    for (i = 0; i < 5; i++) {
+        if (songs == 'all of me' || songs == 'falling' || songs == 'sweater weather') {
+            alert('yup!! good guess');
+            gameScore++
+            break;
+        } else {
+            alert('that is wrong');
 
 
-// }
-// songs=prompt('What are my favorite songs?');
-// }
+        }
+        songs = prompt(question);
+    }
 
-// alert('GameScore= ' + gameScore);
+    alert('GameScore= ' + gameScore);
+}
+getSong('What are my favorite songs');
+
+
 
 
 
