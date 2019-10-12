@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	background-color:burlywood;
+	background-color:rgb(157, 203, 221);
 	text-align:center;
 	
 
@@ -37,24 +37,24 @@ body {
 nav {
 	margin:32px;
 	display:block;
-	color:white;
-	font-size:20px;
+	color:rgb(94, 100, 102);
+	font-size:30px;
 	text-align:left
 }
 h1 {
 	text-align:center;
-	color:white;
+	color:rgb(193, 204, 241);
 	font-size:40px;
-	background-color: cornflowerblue;
+	background-color: rgb(42, 70, 122);
 
 
 }
 
 	
 h2 {
-	color:white;
+	color:rgb(193, 204, 241);
 	font-size:40px;
-	background-color: cornflowerblue;
+	background-color: rgb(42, 70, 122);
 	
 }
 
